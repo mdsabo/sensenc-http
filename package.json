@@ -9,6 +9,9 @@
   "author": "Matthew Sabo",
   "license": "ISC",
   "engines": {
-  	"node": "8.11.3"
+    "node": "8.11.3"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
   }
 }

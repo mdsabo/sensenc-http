@@ -1,13 +1,15 @@
 const http = require('http');
+const express = require('express');
 
 const port = process.env.PORT || 5000;
 
-const server = http.createServer((req, res) =>{
-	res.statusCode = 200;
-	res.setHeader('Content-Type', 'text/plain');
-	res.end('Hello World\n');
+express.get('/', (req, res) => {
+	res.send('Hello from express!');
 });
 
-server.listen(port, () => {
+express.listen(port, (err) => {
+	if (err) {
+		return console.log('Server initialization falied.');
+	}
 	console.log(`Server running on ${port}/`);
-})
+});
