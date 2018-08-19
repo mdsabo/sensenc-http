@@ -32,6 +32,7 @@ app.get('/data', (req, res) => {
 			throw err;
 		}
 		concat += row.string + "|";
+		console.log(row.string);
 	});
 	res.send(concat);
 	console.log("CONCAT: " + concat);
