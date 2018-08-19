@@ -38,7 +38,8 @@ app.get('/data', (req, res) => {
 	});
 });
 
-app.post('/', (req, res) => {
+app.post('/send', (req, res) => {
+	console.log(req.body.sample);
 	db.run(`INSERT INTO data(sample) VALUES(?)`, [req.body.sample], (err) => {
 		if (err) {
       		return console.log(err.message);
