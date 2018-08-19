@@ -1,0 +1,11 @@
+{
+  "name": "http-server",
+  "version": "1.0.0",
+  "description": "HTTP server for SenseNC 2018 running on heroku.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Sabo",
+  "license": "ISC"
+}
