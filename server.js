@@ -31,16 +31,18 @@ app.get('/data', (req, res) => {
 		}
 		concat += row.string + "|";
 	});
-	res.send(concat);
+	res.status(200).end();
 });
 
 app.post('/', (req, res) => {
 	console.log("POST REQUEST RECEIVED");
+	console.log(req.body.sample);
 	db.run(`INSERT INTO data(sample) VALUES(?);`, [req.body.sample], (err) => {
 		if (err) {
       		return console.log(err.message);
     	}
 	});
+	res.send(concat);
 });
 
 app.listen(port, (err) => {
