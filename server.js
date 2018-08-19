@@ -27,13 +27,13 @@ var concat = "";
 app.get('/data', (req, res) => {
 	let sql = `SELECT * from data`;
 	concat = "";
-	db.each(sql, [], (err, row) => {
+	db.all(sql, [], (err, rows) => {
 		if (err) {
 			throw err;
 		}
-		concat += row.sample + "&";
-		console.log(row.sample);
-		console.log("CONCAT: " + concat);
+		rows.forEach((row) => {
+    		concat += (row.sample + "&");
+  		});
 		res.send(concat);
 	});
 });
