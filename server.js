@@ -22,9 +22,11 @@ app.get('/', (req, res) => {
 	res.send('SenseNC heroku webpage!');
 });
 
+var concat = "";
+
 app.get('/data', (req, res) => {
 	let sql = `SELECT * from data;`;
-	var concat = "";
+	concat = "";
 	db.each(sql, [], (err, row) => {
 		if (err) {
 			throw err;
