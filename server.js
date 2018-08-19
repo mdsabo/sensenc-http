@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 
 app.get('/data', (req, res) => {
 	let sql = `SELECT * from data;`;
-	let concat = "";
+	var concat = "";
 	db.each(sql, [], (err, row) => {
 		if (err) {
 			throw err;
