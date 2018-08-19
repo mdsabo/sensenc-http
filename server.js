@@ -31,7 +31,7 @@ app.get('/data', (req, res) => {
 		}
 		concat += row.string + "|";
 	});
-	res.status(200).end();
+	res.send('SUCCESS');
 });
 
 app.post('/', (req, res) => {
