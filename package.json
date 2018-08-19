@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matthew Sabo",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+  	"node": "8.11.3"
+  }
 }
