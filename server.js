@@ -35,6 +35,7 @@ app.get('/data', (req, res) => {
 });
 
 app.post('/', (req, res) => {
+	console.log("POST REQUEST RECEIVED");
 	db.run(`INSERT INTO data(sample) VALUES(?);`, [req.body.sample], (err) => {
 		if (err) {
       		return console.log(err.message);
