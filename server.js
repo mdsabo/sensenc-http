@@ -33,9 +33,9 @@ app.get('/data', (req, res) => {
 		}
 		concat += row.sample + "|";
 		console.log(row.sample);
+		console.log("CONCAT: " + concat);
 	});
 	res.send(concat);
-	console.log("CONCAT: " + concat);
 });
 
 app.post('/', (req, res) => {
