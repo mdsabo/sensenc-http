@@ -13,7 +13,7 @@ let db = new sqlite3.Database(':memory:', (err) => {
   console.log('Connected to the in-memory SQlite database.');
 });
 
-db.run('CREATE TABLE data(sample TEXT)');
+db.run('CREATE TABLE data(sample TEXT);');
 
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/data', (req, res) => {
-	let sql = `SELECT * from data`;
+	let sql = `SELECT * from data;`;
 	let concat = "";
 	db.each(sql, [], (err, rows) => {
 		if (err) {
@@ -35,7 +35,7 @@ app.get('/data', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-	db.run(`INSERT INTO data(sample) VALUES(?)`, [req.body.sample], (err) => {
+	db.run(`INSERT INTO data(sample) VALUES(?);`, [req.body.sample], (err) => {
 		if (err) {
       		return console.log(err.message);
     	}
@@ -47,11 +47,4 @@ app.listen(port, (err) => {
 		return console.log('Server initialization falied.');
 	}
 	console.log(`Server running on ${port}/`);
-});
-
-db.close((err) => {
-  if (err) {
-    return console.error(err.message);
-  }
-  console.log('Close the database connection.');
 });
