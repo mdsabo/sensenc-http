@@ -34,6 +34,7 @@ app.get('/data', (req, res) => {
 		concat += row.string + "|";
 	});
 	res.send(concat);
+	console.log("CONCAT: " + concat);
 });
 
 app.post('/', (req, res) => {
@@ -42,8 +43,7 @@ app.post('/', (req, res) => {
       		return console.log(err.message);
     	}
 	});
-	res.send(concat);
-	console.log("CONCAT: " + concat);
+	res.send("SUCCESS");
 });
 
 app.listen(port, (err) => {
