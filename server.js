@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 var concat = "";
 
 app.get('/data', (req, res) => {
-	let sql = `SELECT * from data;`;
+	let sql = `SELECT * from data`;
 	concat = "";
 	db.each(sql, [], (err, row) => {
 		if (err) {
@@ -37,9 +37,7 @@ app.get('/data', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-	console.log("POST REQUEST RECEIVED");
-	console.log(req.body.sample);
-	db.run(`INSERT INTO data(sample) VALUES(?);`, [req.body.sample], (err) => {
+	db.run(`INSERT INTO data(sample) VALUES(?)`, [req.body.sample], (err) => {
 		if (err) {
       		return console.log(err.message);
     	}
