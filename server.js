@@ -43,6 +43,7 @@ app.post('/', (req, res) => {
     	}
 	});
 	res.send(concat);
+	console.log("CONCAT: " + concat);
 });
 
 app.listen(port, (err) => {
