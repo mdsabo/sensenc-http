@@ -31,7 +31,7 @@ app.get('/data', (req, res) => {
 		if (err) {
 			throw err;
 		}
-		concat += row.sample + "|";
+		concat += row.sample + "&";
 		console.log(row.sample);
 		console.log("CONCAT: " + concat);
 		res.send(concat);
