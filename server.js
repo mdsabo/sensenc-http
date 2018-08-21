@@ -22,6 +22,12 @@ app.get('/', (req, res) => {
 	res.redirect("https://www.sensus.org/sensenc-0");
 });
 
+app.get('/clear', (req, res) => {
+	db.run('DROP TABLE IF EXISTS data;');
+	db.run('CREATE TABLE data(sample TEXT);');
+	res.send("Sample Database Cleared");
+});
+
 var concat = "";
 
 app.get('/data', (req, res) => {
