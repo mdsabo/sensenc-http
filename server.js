@@ -19,7 +19,7 @@ app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-	res.redirect("https://www.google.com");
+	res.redirect("https://www.sensus.org/sensenc-0");
 });
 
 var concat = "";
