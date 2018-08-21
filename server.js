@@ -24,6 +24,7 @@ app.get('/', (req, res) => {
 
 app.get('/clear', (req, res) => {
 	db.run('DROP TABLE IF EXISTS data;');
+	console.log("Dropped table ...");
 	db.run('CREATE TABLE data(sample TEXT);');
 	res.send("Sample Database Cleared");
 });
