@@ -23,8 +23,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/clear', (req, res) => {
-	db.run('DROP TABLE data;');
-	db.run('CREATE TABLE data(sample TEXT);');
+	db.run('DELETE FROM data;');
+	db.run('VACUUM;');
 	res.send("Sample Database Cleared");
 });
 
