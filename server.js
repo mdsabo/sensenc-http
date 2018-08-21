@@ -19,7 +19,7 @@ app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-	res.send('SenseNC heroku webpage!');
+	res.redirect("https://www.google.com");
 });
 
 var concat = "";
