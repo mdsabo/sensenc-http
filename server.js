@@ -2,6 +2,7 @@ const http = require('http');
 var app = require('express')();
 var parser = require('body-parser');
 const sqlite3 = require('sqlite3');
+const path = require('path');
 
 const port = process.env.PORT || 5000;
  
@@ -19,11 +20,11 @@ app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-	res.sendFile('index.html');
+	res.sendFile(path.join(__dirname, '../public', 'index1.html'));
 });
 
 app.get('/index.html', (req, res) => {
-	res.sendFile('index.html');
+	res.sendFile(path.join(__dirname, '../public', 'index1.html'));
 });
 
 app.get('/clear', (req, res) => {
