@@ -20,11 +20,11 @@ app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, '../public', 'index1.html'));
+	res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/index.html', (req, res) => {
-	res.sendFile(path.join(__dirname, '../public', 'index1.html'));
+	res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/clear', (req, res) => {
