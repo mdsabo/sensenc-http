@@ -26,6 +26,10 @@ app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, 'public/', 'index.html'));
 });
 
+app.get('/index.html', (req, res) => {
+	res.sendFile(path.join(__dirname, 'public/', 'index.html'));
+});
+
 app.get('/clear', (req, res) => {
 	db.run('DELETE FROM data;');
 	db.run('VACUUM;');
