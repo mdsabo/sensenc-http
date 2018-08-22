@@ -6,11 +6,11 @@ const sqlite3 = require('sqlite3');
 const port = process.env.PORT || 5000;
  
 // open database in memory
-let db = new sqlite3.Database(':memory:', (err) => {
+let db = new sqlite3.Database('database.db', (err) => {
   if (err) {
     return console.error(err.message);
   }
-  console.log('Connected to the in-memory SQlite database.');
+  console.log('Connected to the SQlite database.');
 });
 
 db.run('CREATE TABLE data(sample TEXT);');
