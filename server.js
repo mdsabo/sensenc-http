@@ -19,12 +19,10 @@ db.run('CREATE TABLE data(sample TEXT);');
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, 'index.html'));
-});
+app.use(express.static('public'));
 
-app.get('/index.html', (req, res) => {
-	res.sendFile(path.join(__dirname, 'index.html'));
+app.get('/', (req, res) => {
+	res.sendFile(path.join(__dirname, 'public/', 'index.html'));
 });
 
 app.get('/clear', (req, res) => {
