@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SenseNC 2018</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="apple-touch-icon" href="icon.png">
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<img class="center fit" src="img/logo_banner.jpg" alt="SenseNC 2018 Logo Banner">
+
+	<div class="navbar">
+		<strong>
+			<a href="#">Team</a>
+			<a href="#mip">MIP Layer</a>
+			<a href="#assay">The Assay</a>
+			<a href="#hardware">Hardware</a>
+			<a href="#software">Software</a>
+		</strong>
+	</div>
+
+	<div class="content">
+		<div id="hardware">
+			<h2>Hardware</h3>
+			<img class="center fit" src="img/about_hardware.jpg" alt="About: SenseNC Hardware">
+			<ol>
+				<li>
+					The device can be powered through wall power or the onboard battery and has built in battery charging capability.
+				</li>
+				<li>
+					The sample is injected onto an electrode array that is used to pass current through the sample.
+				</li>
+				<li>
+					Vancomycin limits the current through the electrodes which can be measured as impedance.  An Analog Devices 5933 intregrated circuit mounted on a Digilent PmodIA is used to measure and analyze the impedance.  Results are sent to the primary microcontroller.
+				</li>
+				<li>
+					The nRF52Dk serves as the primary microcontroller of the system and drives all of the device operations.
+				</li>
+			</ol>
+		</div>
+
+		<hr>
+
+		<div id="software">
+			<h2>Software</h3>
+			<img class="center fit" src="img/about_software.jpg" alt="About: SenseNC Software">
+			<ol>
+				<li>
+					The sensor is driven by custom C++ code built on top of the mbed standard RTOS library.
+				</li>
+				<li>
+					The Android Application was designed using Android Studio and is writen in Java and XML.
+				</li>
+				<li>
+					The web server is hosted on the Heroku web platform and runs a Javascript backend based on the NodeJS library.  This is connected to a SQLite3 database for storing and retrieving samples.  The viewable webpages (this one) are wirtten in HTML and CSS.
+				</li>
+				<li>
+					The server can serve HTTP requests from any web-enabled device and could be used to stream information directly to a hospital patient database for continuous monitoring.
+				</li>
+
+			</ol>
+		</div>
+	</div>
+</body>
+</html>

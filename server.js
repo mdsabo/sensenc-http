@@ -19,7 +19,11 @@ app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-	res.redirect("https://www.sensus.org/sensenc-0");
+	res.sendFile('index.html');
+});
+
+app.get('/index.html', (req, res) => {
+	res.sendFile('index.html');
 });
 
 app.get('/clear', (req, res) => {
