@@ -65,10 +65,10 @@ section {
 	top: 50%;
 	width: auto;
 	margin-top: -22px;
-	padding: 16px;
+	padding: 1.0em;
 	color: white;
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 2.0em;
 	transition: 0.6s ease;
 	border-radius: 0 3px 3px 0;
 }
