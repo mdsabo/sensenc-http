@@ -17,6 +17,7 @@ hr {
 
 section {
 	text-align: center;
+	font-size: 0.8em;
 }
 
 .fit { /* fit screen width */
@@ -59,9 +60,11 @@ section {
 }
 
 .content ul {
-	list-style-position: inside;
+	list-style-position: outside;
+	padding-left: 1em;
 }
 
 .content ol {
-	list-style-position: inside;
+	list-style-position: outside;
+	padding-left: 1em;
 }
